@@ -1,3 +1,4 @@
+```shell
 ping google.com
 fdisk -l
 cfdisk
@@ -43,3 +44,4 @@ pacman -S xfce4 xfce4-goodies
 install xorg stuff
 https://www.howtoforge.com/tutorial/arch-linux-installation-with-xfce-desktop/2/
 https://www.reddit.com/r/archlinux/comments/69r15f/xorgserverutils_removed/
+```
