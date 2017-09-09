@@ -2,9 +2,9 @@
 ping google.com
 fdisk -l
 cfdisk
-	select DOS
-	create 2 bootable partitions 10G & 8192M (if using 8192M ram)
-	create regular partition with remainder of space
+#select DOS
+#create 2 bootable partitions 10G & 8192M (if using 8192M ram)
+#create regular partition with remainder of space
 mkfs.ext4 /dev/sda1
 mkfs.ext4 /dev/sda3
 mkswap /dev/sda2
@@ -16,23 +16,23 @@ pacstrap /mnt base base-devel
 genfstab /mnt>> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
 nano /etc/locale.gen
-	uncomment en_US UTF-8 UTF-8
+#uncomment en_US UTF-8 UTF-8
 locale-gen
 nano /etc/locale.conf
-	LANG=en_US.UTF-8
+#LANG=en_US.UTF-8
 ln -s /usr/share/zoneinfo/EST /etc/localtime
-	rm /etc/locatime if necessary
+#rm /etc/locatime if necessary
 hwclock —systohc —etc
 passwd
 nano /etc/hostname
-	add hostname and save
+#add hostname and save
 systemctl enable dhcpcd
 pacman -S grub os-prober
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 exit bash
 umount /mnt
-  - might say target is busy
+#might say target is busy
 exit again
 reboot
 
